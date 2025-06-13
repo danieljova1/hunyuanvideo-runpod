@@ -23,6 +23,8 @@ WORKDIR /workspace
 RUN git clone --depth 1 https://github.com/deepbeepmeep/Wan2GP.git app
 WORKDIR /workspace/app
 RUN pip install -r requirements.txt
+COPY launch.sh ./launch.sh     
+RUN chmod +x ./launch.sh            
 
 # Optional: pre-download the big Avatar checkpoint (~6 GB)
 # RUN bash scripts/get_hunyuan_avatar_ckpt.sh
