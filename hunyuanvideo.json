@@ -1,0 +1,15 @@
+{
+  "name": "HunyuanVideo Avatar WebUI",
+  "imageName": "ghcr.io/danieljova1/hunyuanvideo:latest",
+  "readme": "Audio-driven avatar video generator based on HunyuanVideo. Supports low VRAM profiles.",
+  "volumeInGb": 120,
+  "volumeMountPath": "/workspace",
+  "containerDiskInGb": 20,
+  "startCommand": "/workspace/app/launch.sh",
+  "ports": ["7860/http"],
+  "env": {
+    "SERVER_NAME": "0.0.0.0",
+    "SERVER_PORT": "7860",
+    "HUNYUAN_PROFILE": "1"
+  }
+}
